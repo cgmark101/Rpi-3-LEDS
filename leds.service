@@ -1,0 +1,13 @@
+[Unit]
+Description=Turn off Rpi3 leds
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=root
+ExecStart=/home/pi/ledsoff.sh
+
+[Install]
+WantedBy=multi-user.target
